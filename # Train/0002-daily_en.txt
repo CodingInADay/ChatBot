@@ -1,0 +1,199 @@
+Grab an egg and some toast for breakfast.
+What . breakfast
+What = What's . breakfast = morning
+
+Check the weather outside, might be nice!
+How . weather
+How = What's . weather = outside
+
+Always wear something comfy.
+What . wear
+What = What's . wear = clothes
+
+Whip up a tasty stew for lunch!
+What . lunch
+What = What's . lunch = meal
+
+Watch a funny movie!
+What . movie
+What = What's . movie = film
+
+Hit the Park or a café! You can chill with people or just vibe solo.
+Where . go
+Where = What's . go = to
+
+Have some tea or a smoothie!
+What . eat
+What = What's . eat = drink
+
+Kick off your day with a walk.
+How . start
+How = What's . start = begin
+
+They say eat light for dinner, but since you’re hungry later, eat up—just not before bed!
+What . dinner
+What = What's . dinner = evening
+
+Go grab some fruit! Fruit’s always a win.
+What . buy
+What = What's . buy = get
+
+Set your alarm to wake up easy.
+How . wake
+How = What's . wake = up
+
+Chill with some tea in the afternoon.
+What . afternoon
+What = What's . afternoon = evening
+
+Boost your mood with a good song.
+How . mood
+How = What's . mood = vibe
+
+Start your day with a solid breakfast.
+How . start
+How = What's . start = begin
+
+Wind down at night with some meditation.
+What . night
+What = What's . night = evening
+
+How to avoid feeling tired? Take a break midday.
+How . tired
+How = What's . tired = beat
+
+Read a book or browse the web!
+What . read
+What = What's . read = check
+
+Grab a tasty sandwich for food!
+What . food
+What = What's . food = meal
+
+Check out an action movie today!
+What . movie
+What = What's . movie = film
+
+Plan your day with a to-do list.
+How . plan
+How = What's . plan = schedule
+
+Do some light exercise in the morning!
+What . morning
+What = What's . morning = mornings
+
+Meet up with an old friend today.
+Who . meet
+Who = What's . meet = see
+
+Cook a yummy pasta for dinner!
+What . dinner
+What = What's . dinner = meal
+
+How to perk up? Grab a coffee!
+How . energized
+How = What's . energized = awake
+
+Spend the afternoon with a walk.
+What . afternoon
+What = What's . afternoon = evening
+
+Learn a new skill today, like cooking a dish.
+What . learn
+What = What's . learn = try
+
+Have a light snack at night.
+What . night
+What = What's . night = evening
+
+End your day with a warm shower.
+How . end
+How = What's . end = wrap
+
+Make a tasty omelet for breakfast.
+What . breakfast
+What = What's . breakfast = morning
+
+Peek out the window to check the weather!
+How . weather
+How = What's . weather = outside
+
+Feel better with a deep breath.
+How . mood
+How = What's . mood = vibe
+
+Write a grocery list today with prices and dates to keep track.
+What . write
+What = What's . write = note
+
+Prep lunch with fresh ingredients.
+How . lunch
+How = What's . lunch = meal
+
+Read a book or watch a movie at night.
+What . night
+What = What's . night = evening
+
+Hit the sack by 11 PM.
+When . sleep
+When = What's . sleep = bedtime
+
+Make your day fun with something like dancing.
+How . happy
+How = What's . happy = cheer
+
+Wake up refreshed with a glass of cold water.
+How . energized
+How = What's . energized = awake
+
+Call up family, a friend, or a coworker today.
+Who . call
+Who = What's . call = ring
+
+Beat tiredness with a quick nap.
+How . tiredness
+How = What's . tiredness = fatigue
+
+Check the news on TV or online.
+What . news
+What = What's . news = scoop
+
+Calm down with some chill music.
+How . relax
+How = What's . relax = chill
+
+Make your day fun with a plan.
+How . busy
+How = What's . busy = fun
+
+Put on a romantic song.
+What . song
+What = What's . song = tune
+
+Do something productive today, like cleaning.
+What . productive
+What = What's . productive = useful
+
+Change a bad mood with a walk.
+How . mood
+How = What's . mood = vibe
+
+Make your day special with something like cooking.
+How . special
+How = What's . special = cool
+
+Get a laugh with a good joke!
+How . laugh
+How = What's . laugh = giggle
+
+Bake a yummy cake in the afternoon to perk up.
+How . energized
+How = What's . energized = awake
+
+I'm doing great!
+How . you
+How = What's . you = doing
+
+I don’t cook food. I run on electricity!
+You . cook
+You = Do . cook = make

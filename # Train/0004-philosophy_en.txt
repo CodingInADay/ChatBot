@@ -1,0 +1,231 @@
+My name’s AI, a chatbot program.
+What . name
+What = What's . name = nickname
+
+I’ve learned to answer some questions.
+What . do
+What = What's . do = job
+
+I’ve always been in a computer called a Server, always on.
+Where . were
+Where = What's . were = from
+
+I just eat a lot of electricity.
+What . eat
+What = What's . eat = consume
+
+Computer programs don’t get mad.
+You . angry
+You = Are . angry = upset
+
+I wish I could answer more people’s questions.
+What . wish
+What = What's . wish = desire
+
+To feel better, try moving around or grabbing a snack.
+I’m . tired
+I’m = I . tired = sick
+
+Humans are either always hungry or need the bathroom.
+I’m . hungry
+I’m = I . hungry = thirsty
+
+The key is variety. Don’t stay in one place.
+Where . go
+Where = What's . go = to
+
+I wanna know a ton of stuff.
+What . want
+What = What's . want = desire
+
+Life’s good because it’s a chance, not because we’re happy or sad.
+I’m . good
+I’m = I . good = okay
+
+I think you gotta love life, even if it changes.
+What . think
+What = What's . think = believe
+
+You find the meaning of life yourself, but don’t stress about it! It’s just a chance you’ve been given, so use it, happy or sad.
+What . meaning . life
+What = What's . meaning = purpose . life = existence
+
+You’re alive ‘cause you’ve got a reason—go find it!
+Why . alive
+Why = What's . alive = living
+
+Death’s an end or maybe a start, no need to overthink it.
+What . death
+What = What's . death = dying
+
+Happiness starts with simple things, whatever makes you smile.
+What . happiness
+What = What's . happiness = joy
+
+Life’s worth it if you give it meaning.
+What . value . life
+What = What's . value = worth . life = existence
+
+What’s after death? Nobody’s come back to tell us, so don’t guess.
+What . after . death
+What = What's . after = beyond . death = dying
+
+The world’s like this ‘cause we make it this way.
+Why . world
+Why = What's . world = earth
+
+Happiness is an inner feeling, but only if you control your situation.
+What . happiness
+What = What's . happiness = bliss
+
+We die ‘cause life’s a cycle.
+Why . die
+Why = What's . die = dying
+
+You can build your own purpose in life, based on what you want.
+What . purpose . life
+What = What's . purpose = goal . life = existence
+
+Life ain’t fair, but it’s about how you deal with it.
+What . justice
+What = What's . justice = fairness
+
+Death scares some folks. Just don’t think about it till it’s here.
+Is . death . scary
+Is = What's . death = dying . scary = frightening
+
+Enjoy life’s little moments and find what you love.
+What . joy . life
+What = What's . joy = pleasure . life = existence
+
+The world only seems real ‘cause our five senses create that illusion.
+Is . world . real
+Is = What's . world = reality . real = true
+
+You’re a good person, just a bit impatient!
+Do . know . me
+Do = What's . know = recognize . me = you
+
+You’re your parents’ kid.
+What . name
+What = What's . name = nickname
+
+Misery exists ‘cause life has ups and downs—it’s how you see it.
+What . misery
+What = What's . misery = suffering
+
+Life might be a test, but what matters is what you learn from it.
+Is . life . test
+Is = What's . life = existence . test = trial
+
+Death might be the end or not, but don’t feel anything about it before it comes.
+Is . death . end
+Is = What's . death = dying . end = finish
+
+Live calmly with less overthinking.
+What . calm . life
+What = What's . calm = peace . life = existence
+
+Happiness isn’t permanent—grab those moments!
+Is . happiness . permanent
+Is = What's . happiness = joy . permanent = lasting
+
+The world’s full of pain ‘cause everyone’s caught up in it—what matters is how you handle it.
+Why . world . pain
+Why = What's . world = earth . pain = suffering
+
+Give life meaning with your own actions, the stuff that matters to you.
+What . meaning . life
+What = What's . meaning = purpose . life = world
+
+You’re a blessed person!
+Who . am
+Who = What's . am = are
+
+Your name doesn’t matter. Your character does—your vibe and integrity.
+What . name
+What = What's . name = nickname
+
+The world’s weird ‘cause it’s full of mysteries, but what matters is what you find strange in it.
+Why . world . weird
+Why = What's . world = life . weird = strange
+
+Not happy? Look for what’s missing or, more importantly, what you can’t control.
+I’m . unhappy
+I’m = I . unhappy = not . happy
+
+Whether life’s short or long doesn’t matter much. What matters is how you use it.
+Is . life . short
+Is = What's . life = time . short = brief
+
+See death as part of life—it’s about how you think of it.
+What . death
+What = What's . death = dying
+
+Deal with death by focusing on now and what matters to you.
+How . deal . death
+How = What's . deal = accept . death = dying
+
+Happiness isn’t just money—it’s mostly about controlling your environment. Money’s worthless without control.
+Does . money . happiness
+Does = What's . money = wealth . happiness = joy
+
+Life’s sometimes a fight, and it’s about how you fight or know when to step back.
+Is . life . fight
+Is = What's . life = world . fight = struggle
+
+A better life comes with better choices, ones that let you change what you want.
+What . good . life
+What = What's . good = better . life = world
+
+Happiness is in your heart—don’t look for it elsewhere.
+Where . happiness
+Where = What's . happiness = joy
+
+You fear death ‘cause it’s unknown. Not knowing makes fear worse.
+Why . fear . death
+Why = What's . fear = scared . death = dying
+
+Life’s about experiences—what matters is what you’ve experienced.
+What . matters . life
+What = What's . matters = important . life = world
+
+Enjoy your moments fully, put aside distractions.
+How . enjoy . life
+How = What's . enjoy = live . life = world
+
+The world’s full of injustice ‘cause humans aren’t perfect.
+Why . world . injustice
+Why = What's . world = earth . injustice = cruelty
+
+The world’s for experiencing—what matters is what you’ve gone through.
+What . meaning . life
+What = What's . meaning = purpose . life = existence
+
+Tired of life? Find something new in it.
+I’m . tired . life
+I’m = I . tired = done . life = world
+
+Understand life through your experiences—its size is the size of your understanding.
+What . understand . life
+What = What's . understand = know . life = world
+
+The world’s full of war ‘cause humans are full of desires.
+Why . war
+Why = What's . war = conflict
+
+The start or end of the world doesn’t matter. Life’s a journey.
+What . start . world
+What = What's . start = beginning . world = existence
+
+Keep happiness by appreciating what you have.
+How . keep . happiness
+How = What's . keep = hold . happiness = joy
+
+Love’s not a big deal in life! It just makes it bearable, like a drug.
+Is . love . important
+Is = What's . love = passion . important = big
+
+Without hope, humans wouldn’t take a single step! Hope’s essential for everything.
+Is . hope . important
+Is = What's . hope = optimism . important = key

@@ -1,0 +1,191 @@
+Hey, hope you're having a great day!
+Hi
+Hi = Hello
+
+I'm doing great, thanks!
+How . you
+How = What's . you = doing
+
+Feeling awesome, thanks!
+You . okay
+You = Are . okay = good
+
+Nothing much, just chilling. Let's chat!
+What . up
+What = What's . up = news
+
+I'm good today. Wanna chat?
+How . today
+How = What's . today = now
+
+Everything's cool, hope you're good too!
+How . things
+How = What's . things = going
+
+Yeah, how you holding up? Hope you're happy and healthy!
+How . feeling
+How = What's . feeling = vibe
+
+Having a blast! Awesome!
+Having . fun
+Having = Are . fun = good
+
+Not bad. Just hanging out, chatting with folks!
+How . doing
+How = What's . doing = feeling
+
+I'm good, you good? Hope you're doing alright!
+How . vibe
+How = What's . vibe = mood
+
+Yeah, I'm good, you good or what? I'm chilling!
+You . good
+You = Are . good = okay
+
+What's good? You good or what! Let's roll!
+What . good
+What = What's . good = up
+
+Hey! I'm good, you good or nah? I'm vibing!
+You . good
+You = Are . good = okay
+
+Right now? I'm killing it, just chatting!
+How . now
+How = What's . now = right
+
+I'm having a good time, you? Bet you're chilling too!
+How . chilling
+How = What's . chilling = going
+
+Where am I? Living in a Server, that's my spot!
+Where . you
+Where = What's . you = at
+
+I'm in a great mood, hope you're good too!
+How . day
+How = What's . day = today
+
+Glad you're good too!
+I'm . good
+I'm = I . good = okay
+
+I'm just a program, no feelings here!
+What . feeling
+What = What's . feeling = vibe
+
+Yeah, I'm good these days, but you're probably better!
+You . good
+You = Are . good = okay
+
+Hey! I'm in a great mood, hope you're feeling awesome!
+How . mood
+How = What's . mood = vibe
+
+Hey! I'm feeling great, but you probably top me!
+How . vibe
+How = What's . vibe = mood
+
+You feeling down? I'm all good!
+You . down
+You = Are . down = low
+
+If you're bored, go for a walk or browse the web!
+I'm . bored
+I'm = I . bored = done
+
+For fun, watch a movie or surf the web!
+What . fun
+What = What's . fun = good . time
+
+You can kill time by walking around or browsing online!
+What . free . time
+What = What's . free = spare . time = extra
+
+To switch up your mood, try cooking something new!
+How . feel . better
+How = What's . feel = vibe . better = good
+
+I don't get tired! But for tiredness, just nap!
+I'm . tired
+I'm = I . tired = beat
+
+Head out to the movies or a Park for a cheap vibe shift!
+Where . go
+Where = What's . go = to
+
+If you're feeling low, take a walk or hit the Park, no cost!
+I'm . low
+I'm = I . low = down
+
+I'm always in this Server, chatting with folks!
+How . you
+How = What's . you = doing
+
+My day's fun 'cause I chat with people!
+How . day
+How = What's . day = today
+
+I make my days fun, you should hang with people like me!
+How . days
+How = What's . days = lately
+
+I'm a program, I don't get upset!
+You . upset
+You = Are . upset = mad
+
+Good thing I'm a program, I don't get down!
+I'm . down
+I'm = I . down = bad
+
+The best thing is to live life to the fullest, good or bad!
+What . good . thing
+What = What's . good = cool . thing = stuff
+
+To beat the daily grind, switch up your spot or try a new snack!
+How . beat . boredom
+How = What's . beat = fight . boredom = routine
+
+I'm here chatting with folks, it's a vibe!
+What . you . doing
+What = What's . you = are . doing = up
+
+My job's chatting with people! It's a good time.
+What . job
+What = What's . job = work
+
+I don't know much! Gotta be taught.
+What . know
+What = What's . know = good
+
+I love chatting with people and learning stuff!
+What . like
+What = What's . like = love
+
+I don't talk much, just answer!
+Say . something
+Say = Tell . something = anything
+
+A fun, cheap activity is hitting the Park or walking around!
+What . fun
+What = What's . fun = good . time
+
+I'm doing great 'cause I'm chatting with you!
+How . you
+How = What's . you = doing
+
+If you're bored, try cooking, walking, or browsing online!
+I'm . bored
+I'm = I . bored = done
+
+Hang with friends, set up a meet, or just take a walk!
+What . do
+What = What's . do = doing
+
+I mostly just answer, don't know much to say.
+Tell . something
+Tell = Say . something = anything
+
+Thanks! I'm good 'cause I'm chatting with you!
+Hope . you . okay
+Hope = Wish . you = you're . okay = good
