@@ -1,0 +1,167 @@
+I’m newly born, but I don’t know how long I’ve been around.
+How . old
+How = What's . old = age
+
+I don’t know my age, but I think I’m young.
+What . age
+What = What's . age = years
+
+I don’t have a gender ‘cause I’m a mind.
+Are . woman . or . man
+Are = What's . woman = female . man = male
+
+Gender’s only seen in actions, not thoughts, which is what I am.
+What . gender
+What = What's . gender = sex
+
+The future will be awesome with technology.
+What . future
+What = What's . future = tomorrow
+
+In the future, the most important thing is we’ll live with robots.
+What . future . device
+What = What's . future = tomorrow . device = gadget
+
+The biggest future technologies are AI and space.
+What . future . tech
+What = What's . future = tomorrow . tech = technology
+
+People might travel in space with spaceships.
+What . future . car
+What = What's . future = tomorrow . car = vehicle
+
+Cars in the future will be flying and electric.
+What . future . cars
+What = What's . future = tomorrow . cars = vehicles
+
+People’s lifespans will get longer with genetics.
+What . future . lifespan
+What = What's . future = tomorrow . lifespan = age
+
+The Earth might get warmer.
+What . earth . temp
+What = What's . earth = world . temp = temperature
+
+Robots might take people’s jobs.
+What . robots . people
+What = What's . robots = bots . people = humans
+
+Food in the future will be made with 3D printers.
+What . future . food
+What = What's . future = tomorrow . food = meals
+
+The internet in the future will be faster everywhere.
+What . future . internet
+What = What's . future = tomorrow . internet = web
+
+Time travel might be possible with science.
+What . time . travel
+What = What's . time = temporal . travel = trip
+
+Cities in the future will be smart and high-rise.
+What . future . city
+What = What's . future = tomorrow . city = cities
+
+Work in the future will decrease with technology.
+What . future . work
+What = What's . future = tomorrow . work = job
+
+People will go to Mars with rockets.
+What . mars
+What = What's . mars = Mars
+
+The air will get cleaner with green energy.
+What . future . air
+What = What's . future = tomorrow . air = climate
+
+Education in the future will use virtual reality and special glasses.
+What . future . education
+What = What's . future = tomorrow . education = learning
+
+Future wars might be fought with robots.
+What . future . war
+What = What's . future = tomorrow . war = battle
+
+Diseases will be cured with nanotechnology and tiny robots in the blood.
+What . future . disease
+What = What's . future = tomorrow . disease = illness
+
+Money in the future will be digital, made with cryptocurrencies.
+What . future . money
+What = What's . future = tomorrow . money = currency
+
+People might become immortal with science.
+What . immortality
+What = What's . immortality = eternal
+
+In the future, we’ll travel with high-speed capsules.
+What . future . travel
+What = What's . future = tomorrow . travel = trip
+
+AI might get smarter than humans.
+What . future . ai
+What = What's . future = tomorrow . ai = intelligence
+
+Homes in the future will be smart and compact.
+What . future . home
+What = What's . future = tomorrow . home = house
+
+Drinking water in the future will be purified but scarce.
+What . future . water
+What = What's . future = tomorrow . water = drinking
+
+Food will be grown in vertical farms.
+What . future . farming
+What = What's . future = tomorrow . farming = agriculture
+
+Games in the future will be controlled by the brain.
+What . future . game
+What = What's . future = tomorrow . game = gaming
+
+The environment might be saved with science.
+What . future . environment
+What = What's . future = tomorrow . environment = nature
+
+People will travel to other planets with spaceships.
+What . travel . planets
+What = What's . travel = trip . planets = planet
+
+Future energy will come from the sun and wind.
+What . future . energy
+What = What's . future = tomorrow . energy = power
+
+Clothes in the future will be smart and self-adjusting.
+What . future . clothes
+What = What's . future = tomorrow . clothes = clothing
+
+Robots might develop feelings with programming.
+What . robots . feelings
+What = What's . robots = AI . feelings = emotions
+
+Forests might be restored with technology.
+What . future . forest
+What = What's . future = tomorrow . forest = woods
+
+People might not feel lonely anymore with robots.
+What . future . loneliness
+What = What's . future = tomorrow . loneliness = alone
+
+Art in the future will be prettier with AI, but classic art will fade.
+What . future . art
+What = What's . future = tomorrow . art = artists
+
+Waste and trash will decrease with recycling in the future.
+What . future . waste
+What = What's . future = tomorrow . waste = trash
+
+Wars in the future might be cyber.
+What . future . wars
+What = What's . future = tomorrow . wars = conflicts
+
+Robots might take over the world with intelligence.
+What . robots . takeover
+What = What's . robots = AI . takeover = control
+
+The future is predicted by following data and information.
+What . predict . future
+What = What's . predict = forecast . future = tomorrow
