@@ -1,0 +1,217 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Lang = Model.Lang;
+    bool isLoggedIn = Model.IsLoggedIn;
+    var lang = Model.Lang;
+    var knowledgeItems = Model.KnowledgeItems;
+    int page = Model.Page;
+    int totalPages = Model.TotalPages;
+    string search = Model.Search;
+    string sort = Model.Sort;
+    string order = Model.Order;
+    var stats = Model.Stats;
+}
+
+<div class="container">
+    <!-- هدر صفحه -->
+    <div class="header">
+        <h1>
+            <!-- لوگوی چت‌بات -->
+            <svg width="40" height="40" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--dark-text)" stroke-width="5"/>
+                <circle cx="50" cy="50" r="20" fill="var(--dark-accent)"/>
+                <circle cx="50" cy="50" r="10" fill="white"/>
+            </svg>
+            @(lang == "fa" ? " چت بات " : " Chat bot ")
+        </h1>
+        <div>
+            <!-- انتخاب زبان -->
+            <select onchange="location.href='?lang='+this.value">
+                <option value="fa" selected="@(lang == "fa")">فارسی</option>
+                <option value="en" selected="@(lang == "en")">English</option>
+            </select>
+            <!-- دکمه تغییر تم -->
+            <button onclick="toggleTheme()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <!-- دکمه ورود/تغییر رمز -->
+            <button onclick="showLogin()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </button>
+            @if (isLoggedIn)
+            {
+                <!-- دکمه خروج -->
+                <button onclick="logout()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+                    </svg>
+                </button>
+            }
+        </div>
+    </div>
+
+    @if (isLoggedIn)
+    {
+        <!-- بخش ادمین: آموزش سیستم -->
+        <div class="admin-section">
+            <h2>@(lang == "fa" ? "آموزش سیستم" : "Train System")</h2>
+            <form onsubmit="event.preventDefault();">
+                <input id="trainSentence" type="text" placeholder="@(lang == "fa" ? "جمله خبری" : "Declarative sentence")">
+                <input id="trainKeywords" type="text" placeholder="@(lang == "fa" ? " کلمات ضروری (با نقطه جدا کنید)" : "Required keywords (dot-separated)")">
+                <input id="trainSynonyms" type="text" placeholder="@(lang == "fa" ? "مترادف‌ها (با = و نقطه جدا کنید)" : "Synonyms (separated by = and dot)")">
+                <button onclick="trainSystem()">@(lang == "fa" ? "آموزش" : "Train")</button>
+            </form>
+            <!-- نمایش آمار -->
+            <div class="stats">
+                <p>@(lang == "fa" ? $"جملات ذخیره‌شده: {stats.KnowledgeCount}" : $"Stored sentences: {stats.KnowledgeCount}")</p>
+            </div>
+        </div>
+
+        <!-- بخش مدیریت جملات -->
+        <div class="grid-section">
+            <h2>@(lang == "fa" ? "مدیریت جملات" : "Manage Sentences")</h2>
+            <div class="search-box">
+                <input id="knowledgeSearch" type="text" value="@Html.Raw(search)" placeholder="@(lang == "fa" ? "جستجو در جملات یا کلمات کلیدی..." : "Search sentences or keywords...")">
+                <button onclick="searchKnowledge()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- جدول نمایش جملات -->
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('id')">#</th>
+                        <th onclick="sortTable('content')">@(lang == "fa" ? "جمله" : "Sentence")</th>
+                        <th onclick="sortTable('keywords')">@(lang == "fa" ? "کلمات ضروری" : "Keywords")</th>
+                        <th onclick="sortTable('rating')">@(lang == "fa" ? "امتیاز" : "Rating")</th>
+                        <th onclick="sortTable('timestamp')">@(lang == "fa" ? "تاریخ" : "Date")</th>
+                        <th onclick="sortTable('is_ai_generated')">@(lang == "fa" ? "AI" : "AI")</th>
+                        <th>@(lang == "fa" ? "عملیات" : "Actions")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int i = (page - 1) * 5 + 1;
+                        foreach (var row in knowledgeItems)
+                        {
+                            <tr>
+                                <td>@(i++)</td>
+                                <td>@Html.Raw(row.Content)</td>
+                                <td>@Html.Raw(row.Keywords)</td>
+                                <td>@Math.Round(row.Rating, 2)</td>
+                                <td>@row.Timestamp.ToString("yyyy-MM-dd HH:mm")</td>
+                                <td>@(row.IsAiGenerated == 1 ? "✔" : "")</td>
+                                <td class="actions">
+                                    <!-- دکمه ویرایش -->
+                                    <button onclick="showEditModal(@row.Id, '@Html.Raw(System.Web.HttpUtility.JavaScriptStringEncode(row.Content))', '@Html.Raw(System.Web.HttpUtility.JavaScriptStringEncode(row.Keywords))', '@Html.Raw(System.Web.HttpUtility.JavaScriptStringEncode(row.Synonyms ?? ""))')">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                        </svg>
+                                    </button>
+                                    <!-- دکمه حذف -->
+                                    <button onclick="deleteKnowledge(@row.Id)">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                                            <path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M5 6v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6M10 11v6M14 11v6"/>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            <!-- دکمه‌های صفحه‌بندی -->
+            <div class="pagination">
+                <button onclick="changePage(@(page - 1))" @(page <= 1 ? "disabled" : "")>&lt;</button>
+                <button onclick="changePage(@(page + 1))" @(page >= totalPages ? "disabled" : "")>&gt;</button>
+            </div>
+        </div>
+
+        <!-- بخش تولید جمله -->
+        <div class="admin-section">
+            <h2>@(lang == "fa" ? "جمله‌سازی" : "Sentence Generation")</h2>
+            <input id="startPhrase" type="text" placeholder="@(lang == "fa" ? "عبارت شروع (اختیاری)" : "Starting phrase (optional)")">
+            <button onclick="generateSentence()">@(lang == "fa" ? "ساخت جمله" : "Generate")</button>
+            <div id="generatedSentence"></div>
+            <!-- نمایش آمار -->
+            <div class="stats">
+                <p>@(lang == "fa" ? $"جملات ذخیره‌شده: {stats.KnowledgeCount}" : $"Stored sentences: {stats.KnowledgeCount}")</p>
+                <p>@(lang == "fa" ? $"توکن‌ها: {stats.TokensCount}" : $"Tokens: {stats.TokensCount}")</p>
+            </div>
+        </div>
+        <br>
+        <h2>@(lang == "fa" ? "بخش گفتگو" : "Chat section")</h2>
+    }
+
+    <!-- فرم ارسال پرس‌وجو -->
+    <form onsubmit="event.preventDefault();">
+        <div class="chat-box">
+            <input id="queryInput" type="text" placeholder="@(lang == "fa" ? "سوال خود را بپرسید..." : "Ask your question...")" autocomplete="off">
+            <button onclick="sendQuery()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+            </button>
+        </div>
+    </form>
+    <!-- بخش نمایش پیام‌ها -->
+    <div class="chat-messages" id="chatMessages">
+        @if (!isLoggedIn)
+        {
+            <div class="chat-message user"><div class="bubble">@(lang == "fa" ? "سلام" : "Hi")</div></div>
+            <div class="chat-message bot"><div class="bubble">@(lang == "fa" ? "دانش کجاست؟" : "Not enough knowledge!")</div></div>
+        }
+    </div>
+
+    <!-- فوتر -->
+    <div class="header">
+        <span style="text-align: center; margin: auto;">...</span>
+    </div>
+
+    <!-- مدال ورود/تغییر رمز -->
+    <div id="loginModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <h2>@(lang == "fa" ? (isLoggedIn ? "تغییر رمز" : "ورود") : (isLoggedIn ? "Change Password" : "Login"))</h2>
+            @if (!isLoggedIn)
+            {
+                <input id="username" type="text" placeholder="@(lang == "fa" ? "نام کاربری" : "Username")">
+                <input id="password" type="password" placeholder="@(lang == "fa" ? "رمز عبور" : "Password")">
+                <button onclick="login()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            }
+            else
+            {
+                <input id="newPass" type="password" placeholder="@(lang == "fa" ? "رمز جدید" : "New Password")">
+                <button onclick="changePass()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            }
+        </div>
+    </div>
+
+    <!-- مدال ویرایش جمله -->
+    <div id="editModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <h2>@(lang == "fa" ? "ویرایش جمله" : "Edit Sentence")</h2>
+            <input id="editSentence" type="text" placeholder="@(lang == "fa" ? "جمله خبری" : "Declarative sentence")">
+            <input id="editKeywords" type="text" placeholder="@(lang == "fa" ? "کلمات ضروری (با نقطه جدا کنید)" : "Required keywords (dot-separated)")">
+            <input id="editSynonyms" type="text" placeholder="@(lang == "fa" ? "مترادف‌ها (با = و نقطه جدا کنید)" : "Synonyms (separated by = and dot)")">
+            <input id="editId" type="hidden">
+            <button onclick="editKnowledge()">@(lang == "fa" ? "ذخیره" : "Save")</button>
+        </div>
+    </div>
+</div>

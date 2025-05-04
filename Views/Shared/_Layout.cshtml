@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="@ViewBag.Lang" dir="@(ViewBag.Lang == "fa" ? "rtl" : "ltr")">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چت‌بات</title>
+    <!-- لود فونت فارسی و آیکون -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stackoverflow.com/favicon.ico">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    @RenderBody()
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

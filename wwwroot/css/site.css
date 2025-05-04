@@ -1,0 +1,451 @@
+/* تعریف متغیرهای CSS برای تم تیره و روشن */
+:root {
+  --dark-bg: #1e2a44;
+  --dark-frame: #2c3e50;
+  --dark-accent: #8e44ad;
+  --dark-text: #e0e0e0;
+  --button: #4d0099;
+  --button-hover: #6b00cc;
+  --light-bg: #f5f5f5;
+  --light-frame: #ffffff;
+  --light-accent: rgb(228, 219, 232);
+  --light-text: #2c3e50;
+  --light-button: #e0e0e0;
+  --light-button-hover: #d0d0d0;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* استایل‌های پایه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+body.light {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+/* تنظیمات برای صفحه‌نمایش بزرگ‌تر */
+@media (min-width: 601px) {
+  .container {
+      width: 60%;
+      padding: 20px;
+  }
+}
+
+.header {
+  background: var(--dark-frame);
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+body.light .header {
+  background: var(--light-frame);
+}
+
+h1 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+h1 svg {
+  margin-right: 10px;
+}
+
+.header div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+select, input, button {
+  padding: 8px;
+  border-radius: var(--radius);
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+select {
+  background: var(--button);
+  color: white;
+  border: 1px solid rgb(151, 155, 164);
+  cursor: pointer;
+}
+
+body.light select {
+  background: var(--light-button);
+  color: var(--light-text);
+}
+
+button {
+  border: 1px solid rgb(151, 155, 164);
+  background: var(--button);
+  color: white;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+body.light button {
+  background: var(--light-button);
+  color: var(--light-text);
+}
+
+body.light button:hover {
+  background: var(--light-button-hover);
+}
+
+button svg {
+  stroke: white !important;
+}
+
+body.light button svg {
+  stroke: var(--light-text) !important;
+}
+
+/* تنظیمات برای صفحه‌نمایش کوچک‌تر */
+@media (max-width: 600px) {
+  button {
+      width: 30px;
+      height: 30px;
+  }
+  .header div {
+      gap: 5px;
+  }
+  select {
+      padding: 5px;
+  }
+}
+
+.chat-box {
+  background: var(--dark-frame);
+  border-radius: var(--radius);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+body.light .chat-box {
+  background: var(--light-frame);
+}
+
+#queryInput {
+  flex-grow: 1;
+  border: 1px solid var(--dark-accent);
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  margin-right: 10px;
+}
+
+body.light #queryInput {
+  border: 1px solid var(--light-accent);
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  height: calc(87vh - 150px);
+}
+
+@if (isLoggedIn) {
+  .chat-messages {
+      min-height: 50vh;
+      height: auto;
+  }
+}
+
+body.light .chat-messages {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.chat-message {
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+}
+
+.chat-message.user .bubble {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--button);
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.chat-message.bot .bubble {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--dark-accent);
+  margin-right: auto;
+  margin-left: 0;
+}
+
+body.light .chat-message.bot .bubble {
+  background: var(--light-accent) !important;
+}
+
+body.light .chat-message.user .bubble {
+  background: var(--light-button);
+}
+
+.feedback {
+  margin: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.feedback button {
+  padding: 5px 10px;
+  position: relative;
+  opacity: 0.5;
+}
+
+.feedback button.voted {
+  background: #28a745;
+}
+
+.feedback button.voted-negative {
+  background: #dc3545;
+}
+
+.feedback button:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.admin-section {
+  background: var(--dark-frame);
+  padding: 15px;
+  border-radius: var(--radius);
+  margin-top: 20px;
+}
+
+body.light .admin-section {
+  background: var(--light-frame);
+}
+
+.admin-section input, .admin-section button {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--dark-frame);
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+body.light .modal-content {
+  background: var(--light-frame);
+}
+
+.modal-content input, .modal-content textarea {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.stats {
+  background: var(--dark-frame);
+  padding: 10px;
+  border-radius: var(--radius);
+  margin-top: 10px;
+  text-align: center;
+}
+
+body.light .stats {
+  background: var(--light-frame);
+}
+
+.grid-section {
+  margin-top: 20px;
+}
+
+.grid-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--dark-frame);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+body.light .grid-section table {
+  background: var(--light-frame);
+}
+
+.grid-section th, .grid-section td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: right;
+}
+
+.grid-section th {
+  background: var(--button);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px;
+}
+
+body.light .grid-section th {
+  background: var(--light-button);
+  color: var(--light-text);
+}
+
+.grid-section td {
+  font-size: 14px;
+}
+
+.grid-section td.actions {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.grid-section .search-box {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.grid-section .search-box input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--dark-accent);
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+body.light .grid-section .search
+
+System: متأسفانه پاسخ به دلیل محدودیت طول قطع شد. بخش باقی‌مانده از **site.css** و فایل **site.js** که شامل JavaScript است، در ادامه ارائه می‌شود. همچنین، دستورالعمل‌های تست و راه‌اندازی پروژه نیز اضافه شده است تا اطمینان حاصل شود که پروژه کامل و قابل اجرا است.
+
+---
+
+### ادامه فایل‌های استاتیک
+
+**wwwroot/css/site.css** (ادامه)
+
+<xaiArtifact artifact_id="5f435735-9980-4bca-a331-7f4b689ba672" artifact_version_id="fcdbdb97-0327-4a9b-9769-0dc537f194b1" title="site.css" contentType="text/css">
+/* ادامه استایل‌های قبلی */
+.grid-section .search-box input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--dark-accent);
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+body.light .grid-section .search-box input {
+  border: 1px solid var(--light-accent);
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+.grid-section .search-box button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-section .actions button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-section .actions button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+}
