@@ -3,7 +3,7 @@ Do not forget install <a href="https://dotnet.microsoft.com/en-us/download/dotne
 Advanced chat bot with bilingual user interface and training capabilities. </br>
 
 روبات پیشرفته ی گفتگو با رابط کاربری دوزبانه و قابلیت هوشمند یادگیری و فایلهای نمونه برای آموزش روبات.</br>
-فراموش نکنید برای اجرا <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank">.Net 8.0 SDK.</a> را نصب کنید.
+فراموش نکنید برای اجرا <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0" target="_blank">Net 8.0 SDK.</a> را نصب کنید.
 </br></br>
 ![Untitled-1](https://github.com/user-attachments/assets/29e32ac7-3156-4d38-b4e2-3ce5705c77b0)
 </br></br>
