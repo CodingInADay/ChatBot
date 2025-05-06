@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دموی چت بات</title>
+    <style>
+        :root {
+            --dark-bg: #1e2a44;
+            --dark-frame: #2c3e50;
+            --dark-accent: #8e44ad;
+            --dark-text: rgb(227, 223, 209);
+            --button: #6454ab;
+            --button-hover: #6b00cc;
+            --light-bg: #f5f5f5;
+            --light-frame: #ffffff;
+            --light-accent: rgb(228, 219, 232);
+            --light-text: #2c3e50;
+            --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--dark-bg);
+            color: var(--dark-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 28px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            flex-grow: 1;
+        }
+
+        .header {
+            background: var(--dark-frame);
+            padding: 15px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .textarea-box {
+            background: var(--dark-frame);
+            padding: 15px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 450px;
+            padding: 10px;
+            border: 1px solid var(--dark-accent);
+            border-radius: var(--radius);
+            background: var(--dark-bg);
+            color: var(--dark-text);
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            background: var(--button);
+            border: none;
+            border-radius: var(--radius);
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            pointer-events: auto;
+            touch-action: manipulation;
+        }
+
+        button:hover {
+            background: var(--button-hover);
+        }
+
+        button:disabled {
+            background: #888;
+            cursor: not-allowed;
+        }
+
+        button svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .error {
+            color: #ff4444;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                margin: 10px auto;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            textarea {
+                font-size: 28px;
+                min-height: 50vh;
+            }
+
+            button svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>دموی چت بات</h1>
+        </div>
+        <div class="textarea-box">
+            <textarea id="questions" style="font-size: 22px ;"> 
+                سلام! ، چطوری؟ ، خوبی؟ ، اسمت چیه؟ ، تو اصلاً به چه درد میخوری!؟ ، تا حالا کجا بودی؟ ، غذا چی میخوری؟ ، گاهی فکر می کنم تو چه آرزویی داری! ، خیلی خسته شده ام! ، دلت چی میخواد؟ ، کاش میدونستی معنی زندگی چیه! ، واقعاً کسی هست که بدونه خوشبختی چیه؟ یا حیات ارزش داره یا نه. ، دلم میخواد بدونم هدف زندگی چیه! ، آخه زندگی هم عادلانه نیست! ، به نظرت دنیا اصلاً واقعیه؟ ، منو میشناسی؟ ، اسمم چیه اگه راست میگی؟ ، ولی مرگ پایان همه چیزه! ، این دنیا که پر از درد و رنج هست پس به چه درد میخوره!؟ ، میدونی اسمم چیه؟ ، دنیا خیلی عجیب و غریب هست! ، زندگی هم به نظر کوتاهه! ، چطوری با مرگ کنار بیام؟ ، پس زندگی انگار یه جور جنگ یا مبارزه است! ، خوشبختی پس کجاست؟ ، چطوری باید از زندگی لذت برد؟ ، آخه دنیا هم پر از ظلم و ستم هست. ، معنای این زندگی چیه؟ ، نمی تونم زندگی رو درک کنم. ، عشق هم که یه موضوع ناپایداره اصلاً. پس میشه گفت مهمه!؟ ، ولی فکر کنم امید مهمه. ، پول چی؟ خوشبختی میاره؟ 
+            </textarea>
+        </div>
+        <div class="controls">
+            <button id="playBtn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
+            <button id="stopBtn" disabled>
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6h12v12H6z"/>
+                </svg>
+            </button>
+        </div>
+        <div id="error" class="error"></div>
+    </div>
+
+    <script>
+        let questionsArray = [ 'سلام!' , 'چطوری؟' , 'خوبی' ,'اسمت چیه؟' , 'تو اصلاً به چه درد میخوری!؟' , 'تا حالا کجا بودی؟' , 'غذا چی میخوری؟' , 'گاهی فکر می کنم تو چه آرزویی داری!' , 'خیلی خسته شده ام!' , 'دلت چی میخواد؟' , 'کاش میدونستی معنی زندگی چیه!' , 'به این فکر میکنم که اصلاً چرا زنده ام!' , 'واقعاً کسی هست که بدونه خوشبختی چیه؟' , 'یا حیات ارزش داره یا نه.' , 'دلم میخواد بدونم هدف زندگی چیه!' , 'آخه زندگی هم عادلانه نیست!' , 'به نظرت دنیا اصلاً واقعیه؟' , 'منو میشناسی؟' , 'اسمم چیه اگه راست میگی؟' , 'ولی مرگ پایان همه چیزه!' , 'این دنیا که پر از درد و رنج هست، به چه درد میخوره!؟' , 'میدونی اسمم چیه؟' , 'زندگی خیلی عجیب و غریب هست!' , 'زندگی هم به نظر کوتاهه!' , 'چطوری با مرگ کنار بیام؟' , 'پس زندگی انگار یه جور جنگ یا مبارزه است!' , 'خوشبختی پس کجاست؟' , 'چطوری باید از زندگی لذت برد؟' , 'آخه دنیا هم پر از ظلم و ستم هست.' , 'معنای این زندگی چیه؟' , 'نمی تونم زندگی رو درک کنم.' , 'عشق هم که یه موضوع ناپایداره، اصلاً میشه گفت مهمه!؟' , 'ولی فکر کنم امید مهمه.' , 'پول چی؟ خوشبختی میاره؟' ];
+        const textarea = document.getElementById('questions');
+        const playBtn = document.getElementById('playBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const errorDiv = document.getElementById('error');
+        let demoInterval = null;
+        let currentIndex = 0;
+        let chatWindow = null;
+        let isOpeningWindow = false; // متغیر کنترلی برای جلوگیری از باز شدن چند تب
+
+        // به‌روزرسانی آرایه پرس‌وجوها از textarea
+        function updateQuestionsArray() {
+            const input = textarea.value.trim();
+            if (!input) {
+                showError('لطفاً حداقل یک پرس‌وجو وارد کنید!');
+                return false;
+            }
+            questionsArray = input.split('،').map(q => q.trim()).filter(q => q);
+            if (questionsArray.length === 0) {
+                showError('هیچ پرس‌وجوی معتبری وارد نشده است!');
+                return false;
+            }
+            return true;
+        }
+
+        function showError(message) {
+            errorDiv.textContent = message;
+            setTimeout(() => errorDiv.textContent = '', 5000);
+        }
+
+        function sendQueryToChatWindow(query) {
+            console.log('Attempting to send query:', query);
+            if (!chatWindow || chatWindow.closed) {
+                showError('صفحه چت‌بات باز نیست! دمو متوقف شد.');
+                stopDemo();
+                return;
+            }
+
+            try {
+                const chatDoc = chatWindow.document;
+                const queryInput = chatDoc.getElementById('queryInput');
+                const sendButton = chatDoc.querySelector('.chat-box button');
+                const chatMessages = chatDoc.getElementById('chatMessages');
+
+                if (queryInput && sendButton && chatMessages) {
+                    // پاک کردن پیام‌های قبلی
+                    chatMessages.innerHTML = '';
+                    queryInput.value = query;
+                    queryInput.dispatchEvent(new Event('input')); // شبیه‌سازی تایپ
+                    sendButton.click(); // شبیه‌سازی کلیک
+                    console.log('Query sent to chat:', query);
+                } else {
+                    console.error('Chat input, button, or messages not found');
+                    showError('تکست‌باکس، دکمه‌ی ارسال یا بخش پیام‌ها یافت نشد!');
+                }
+            } catch (error) {
+                console.error('Error interacting with chat window:', error);
+                showError('خطا در ارسال پرس‌وجو: ' + error.message);
+            }
+        }
+
+        function runDemo() {
+            if (currentIndex >= questionsArray.length) {
+                currentIndex = 0; // بازگشت به ابتدا
+            }
+            const query = questionsArray[currentIndex];
+            sendQueryToChatWindow(query);
+            currentIndex++;
+        }
+
+        function toggleDemo() {
+            console.log('Play button clicked');
+            if (demoInterval) {
+                stopDemo();
+                return;
+            }
+
+            if (isOpeningWindow) return; // جلوگیری از اجرای چندباره
+            isOpeningWindow = true;
+
+            // به‌روزرسانی پرس‌وجوها
+            if (!updateQuestionsArray()) {
+                isOpeningWindow = false;
+                return;
+            }
+
+            const serverUrl = window.location.origin;
+            chatWindow = window.open(`${serverUrl}/chatbot/index.php`, '_blank');
+            if (!chatWindow) {
+                showError('نمی‌توان صفحه چت‌بات را باز کرد! لطفاً پاپ‌آپ‌ها را مجاز کنید.');
+                isOpeningWindow = false;
+                return;
+            }
+
+            const checkLoaded = setInterval(() => {
+                try {
+                    if (chatWindow.document.readyState === 'complete') {
+                        clearInterval(checkLoaded);
+                        console.log('Chat window loaded');
+                        playBtn.disabled = true;
+                        stopBtn.disabled = false;
+                        isOpeningWindow = false;
+                        runDemo();
+                        demoInterval = setInterval(runDemo, 6000);
+                    }
+                } catch (e) {
+                    console.error('Error checking window load:', e);
+                    isOpeningWindow = false;
+                }
+            }, 500);
+        }
+
+        function stopDemo() {
+            console.log('Stop button clicked');
+            clearInterval(demoInterval);
+            demoInterval = null;
+            playBtn.disabled = false;
+            stopBtn.disabled = true;
+            currentIndex = 0;
+            if (chatWindow && !chatWindow.closed) {
+                chatWindow.close();
+            }
+            chatWindow = null;
+            isOpeningWindow = false;
+        }
+
+        // افزودن رویدادها
+        playBtn.addEventListener('click', toggleDemo);
+    </script>
+</body>
+</html>
